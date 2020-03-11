@@ -1,0 +1,35 @@
+name: XcodeGenTest
+settings:
+  base:
+    IPHONEOS_DEPLOYMENT_TARGET: 12.0
+targets:
+  XcodeGenTest:
+    type: application
+    platform: iOS
+    sources: XcodeGenTest
+    settings:
+      ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+      PRODUCT_BUNDLE_IDENTIFIER: shinyamurata.XcodeGenTest
+      CODE_SIGN_STYLE: Automatic
+      DEVELOPMENT_TEAM: 7C94WVT824
+      IPHONEOS_DEPLOYMENT_TARGET: 12.0
+    scheme:
+      XcodeGenTest: XcodeGenTest
+  XcodeGenTestTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources: XcodeGenTestTests
+    settings:
+      CODE_SIGN_STYLE: Automatic
+      TEST_HOST: = $(BUILT_PRODUCTS_DIR)/XcodeGenTest.app/XcodeGenTest
+      PRODUCT_BUNDLE_IDENTIFIER: = shinyamurata.XcodeGenTestTests
+      DEVELOPMENT_TEAM: C94WVT824
+  XcodeGenTestUITests:
+    type: bundle.ui-testing
+    platform: iOS
+    sources: XcodeGenTestTests
+    settings:
+      CODE_SIGN_STYLE: Automatic
+      TEST_HOST: ${BUILT_PRODUCTS_DIR}/XcodeGenTest.app
+      PRODUCT_BUNDLE_IDENTIFIER: = shinyamurata.XcodeGenTestTests
+      DEVELOPMENT_TEAM: C94WVT824
