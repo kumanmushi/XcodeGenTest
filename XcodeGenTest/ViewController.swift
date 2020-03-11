@@ -7,12 +7,16 @@
 //
 
 import UIKit
+import Kingfisher
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var imageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        imageView.kf.setImage(with: URL(string: "https://picsum.photos/350/250/?random"))
     }
 
 

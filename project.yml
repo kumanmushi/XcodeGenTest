@@ -4,6 +4,8 @@ settings:
     IPHONEOS_DEPLOYMENT_TARGET: 12.0
 targets:
   XcodeGenTest:
+    dependencies:
+      - carthage: Kingfisher
     type: application
     platform: iOS
     sources: XcodeGenTest
